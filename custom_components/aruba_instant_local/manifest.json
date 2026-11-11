@@ -1,0 +1,15 @@
+{
+  "domain": "aruba_instant_local",
+  "name": "Aruba Instant Local",
+  "codeowners": [
+    "@tunfie"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/tunfie/home-assistant-aruba-instant-local",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/tunfie/home-assistant-aruba-instant-local/issues",
+  "requirements": [],
+  "version": "0.1.0-beta.1"
+}

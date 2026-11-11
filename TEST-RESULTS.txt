@@ -1,0 +1,8 @@
+2026-11-11 — initial beta verification
+22 unittest tests passed against the actual Home Assistant stable container.
+Network disabled and root filesystem read-only for synthetic tests.
+Live read-only API verified: AP-305, Aruba Instant 8.13.3.0, two access points, four SSIDs.
+One transient HTTP request failed on the first live attempt; subsequent complete poll succeeded.
+No replacement of the existing home installation.
+Full clean-install config flow / hassfest / HACS CI and other firmware versions still pending.
+No firmware write or client disconnect functionality claimed.

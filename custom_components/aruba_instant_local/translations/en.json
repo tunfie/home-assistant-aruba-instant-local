@@ -1,0 +1,53 @@
+{
+  "title": "Aruba Instant Local",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect local Aruba",
+        "description": "Connect directly to Aruba Instant (AOS 8). TLS is verified; this integration does not modify controller configuration.",
+        "data": {
+          "host": "Controller IP address or hostname",
+          "port": "REST API port",
+          "tls_name": "Certificate hostname (blank = controller host)",
+          "ap_address": "Active conductor AP address (blank = controller host)",
+          "username": "Username",
+          "password": "Password",
+          "scan_interval": "Polling interval (seconds)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate",
+        "data": {
+          "host": "Controller IP address or hostname",
+          "port": "REST API port",
+          "tls_name": "Certificate hostname (blank = controller host)",
+          "ap_address": "Active conductor AP address (blank = controller host)",
+          "username": "Username",
+          "password": "Password",
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "api_disabled": "The controller REST API is disabled. Ask its administrator to enable allow-rest-api, then retry.",
+      "invalid_auth": "Authentication failed. Check the local controller account.",
+      "cannot_connect": "Cannot read the local controller. Check reachability, API access and the trusted TLS certificate.",
+      "invalid_input": "Enter valid hostnames, port, interval and credentials."
+    },
+    "abort": {
+      "already_configured": "This controller is already configured.",
+      "reauth_successful": "Authentication updated.",
+      "wrong_device": "This is a different controller."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling settings",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  }
+}

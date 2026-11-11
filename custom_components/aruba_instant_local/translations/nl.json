@@ -1,0 +1,53 @@
+{
+  "title": "Aruba Instant Local",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Aruba lokaal verbinden",
+        "description": "Verbind rechtstreeks met Aruba Instant (AOS 8). TLS wordt gecontroleerd; deze integratie wijzigt de controllerinstellingen niet.",
+        "data": {
+          "host": "IP-adres of hostnaam controller",
+          "port": "REST-API-poort",
+          "tls_name": "Hostnaam op certificaat (leeg = controlleradres)",
+          "ap_address": "Adres actieve conductor-AP (leeg = controlleradres)",
+          "username": "Gebruikersnaam",
+          "password": "Wachtwoord",
+          "scan_interval": "Uitleesinterval (seconden)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Opnieuw aanmelden",
+        "data": {
+          "host": "IP-adres of hostnaam controller",
+          "port": "REST-API-poort",
+          "tls_name": "Hostnaam op certificaat (leeg = controlleradres)",
+          "ap_address": "Adres actieve conductor-AP (leeg = controlleradres)",
+          "username": "Gebruikersnaam",
+          "password": "Wachtwoord",
+          "scan_interval": "Uitleesinterval (seconden)"
+        }
+      }
+    },
+    "error": {
+      "api_disabled": "De REST-API staat uit. Laat de beheerder allow-rest-api inschakelen en probeer opnieuw.",
+      "invalid_auth": "Aanmelding mislukt. Controleer het lokale controlleraccount.",
+      "cannot_connect": "Controller niet uitleesbaar. Controleer bereikbaarheid, API-toegang en het vertrouwde TLS-certificaat.",
+      "invalid_input": "Vul geldige adressen, poort, interval en inloggegevens in."
+    },
+    "abort": {
+      "already_configured": "Deze controller is al gekoppeld.",
+      "reauth_successful": "Aanmelding bijgewerkt.",
+      "wrong_device": "Dit is een andere controller."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Uitleesinstellingen",
+        "data": {
+          "scan_interval": "Uitleesinterval (seconden)"
+        }
+      }
+    }
+  }
+}
