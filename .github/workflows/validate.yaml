@@ -1,0 +1,31 @@
+name: Validate
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test in isolated Home Assistant runtime
+        run: >-
+          docker run --rm --network none --read-only
+          --tmpfs /tmp:rw,size=128m -e PYTHONDONTWRITEBYTECODE=1
+          -v "$GITHUB_WORKSPACE:/workspace:ro" -w /workspace
+          --entrypoint python3 ghcr.io/home-assistant/home-assistant:stable
+          -m unittest discover -s tests -v
+  hassfest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: home-assistant/actions/hassfest@master
+  hacs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hacs/action@main
+        with:
+          category: integration
