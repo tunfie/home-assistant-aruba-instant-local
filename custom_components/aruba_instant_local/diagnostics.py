@@ -5,7 +5,7 @@ async def async_get_config_entry_diagnostics(hass, entry):
     coordinator = entry.runtime_data
     data = coordinator.data or {}
     return {
-        "version": "0.1.0-beta.1",
+        "version": "0.1.0-beta.2",
         "available": coordinator.last_update_success,
         "ap_count": len(data.get("aps", [])),
         "ssid_count": len(data.get("ssids", [])),
