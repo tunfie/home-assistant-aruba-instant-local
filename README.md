@@ -1,6 +1,6 @@
 # Aruba Instant Local
 
-**0.1.0-beta.2 — publication candidate, not yet in the Marketplace catalog.**
+**0.1.0 — local monitoring release; HACS catalog review pending.**
 
 Local Aruba Instant (AOS 8) monitoring for Home Assistant, without Telnet, SSH,
 cloud access, host scripts or extra containers. Independent of any dashboard.
